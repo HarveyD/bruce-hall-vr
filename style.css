@@ -1,0 +1,71 @@
+body, html {
+    padding: 0;
+    margin: 0;
+}
+
+#panorama {
+    height: 100%;
+    width: 100%;
+
+    background-color: white;
+    transition: all .5s ease-in-out;
+    z-index: 999;
+}
+
+.hide {
+    left: 100%;
+}
+
+.show {
+    left: 0%;
+}
+
+.background {
+    background-image: url(./bruce-background.png);
+    height: 100%;
+    width: 100%;
+
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%; 
+}
+
+#south-quad {
+    background: clear;
+    left: 14%;
+    width: 20%;
+    height: 23%;
+    z-index: 100;
+    top: 29%;
+    position: absolute;
+}
+
+#south-quad:hover {
+    background-color: rgba(0,0,210, 0.3);
+}
+
+#north-quad {
+    background: clear;
+    left: 30%;
+    width: 20%;
+    height: 23%;
+    z-index: 100;
+    top: 29%;
+    position: absolute;
+}
+
+#north-quad:hover {
+    background-color: rgba(0,0,210, 0.3);
+}
+
+#close {
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid red;
+    color: red;
+    left: 90%;
+    height: 40px;
+    width: 100px;
+}

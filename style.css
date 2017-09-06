@@ -8,8 +8,6 @@ body, html {
     width: 100%;
 
     background-color: white;
-    transition: all .5s ease-in-out;
-    z-index: 999;
 }
 
 .hide {
@@ -20,10 +18,13 @@ body, html {
     left: 0%;
 }
 
-.background {
+#background {
+    transition: all .5s ease-in-out;
     background-image: url(./bruce-background.png);
     height: 100%;
     width: 100%;
+    z-index: 999;
+    position: absolute;
 
     -webkit-background-size: 100% 100%;
     -moz-background-size: 100% 100%;
@@ -31,31 +32,32 @@ body, html {
     background-size: 100% 100%; 
 }
 
-#south-quad {
-    background: clear;
-    left: 14%;
-    width: 20%;
-    height: 23%;
-    z-index: 100;
-    top: 29%;
-    position: absolute;
-}
-
-#south-quad:hover {
-    background-color: rgba(0,0,210, 0.3);
+#description {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 48px;
 }
 
 #north-quad {
-    background: clear;
-    left: 30%;
-    width: 20%;
-    height: 23%;
-    z-index: 100;
-    top: 29%;
+    left: 9%;
+    width: 23%;
+    height: 25%;
+    top: 31%;
+}
+
+#south-quad {
+    left: 63%;
+    width: 22%;
+    height: 21%;
+    top: 35%;
+}
+
+.section {
     position: absolute;
 }
 
-#north-quad:hover {
+.section:hover {
     background-color: rgba(0,0,210, 0.3);
 }
 
@@ -63,8 +65,8 @@ body, html {
     position: absolute;
     z-index: 999;
     background-color: rgba(0,0,0,0);
-    border: 1px solid red;
-    color: red;
+    border: 1px solid #0000B4;
+    color: #0909B6;
     left: 90%;
     height: 40px;
     width: 100px;

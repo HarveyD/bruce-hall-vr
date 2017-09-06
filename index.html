@@ -1,10 +1,9 @@
 <DOCTYPE HTML>
 <html>
 <head>
-    <add name="Access-Control-Allow-Origin" value="*" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A simple example</title>
+    <title>Bruce Hall VR</title>
     <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
     <link rel="stylesheet" href="./style.css"/>
     <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
@@ -12,13 +11,14 @@
     <script src="./scripts.js"></script>
 </head>
 <body>
-    <div class="background">
-        <div id="panorama" class="hide">
-            <button id="close"> Close </button>
-        </div>
-    
-        <div id="south-quad"></div>
-        <div id="north-quad"></div>
+    <div id="background" class="show">
+        <h1 id="description"> North Quad </h1>
+        <div id="south-quad" class="section"></div>
+        <div id="north-quad" class="section"></div>
+    </div>
+
+    <div id="panorama">
+        <button id="close"> Close </button>
     </div>
 </body>
 </html>

@@ -1,7 +1,12 @@
 let viewer;
 let sections = {
     "north-quad": "North Quad",
-    "south-quad": "South Quad"
+    "south-quad": "South Quad",
+    "pac-quad": "Packard Quad",
+    "dining-hall": "Dining Hall",
+    "front": "Front of Bruce Hall",
+    "reception": "Reception",
+    "extension-lawn": "Extension Lawn"
 };
 
 $(document).ready(() => {
@@ -19,19 +24,23 @@ $(document).ready(() => {
 var initViewer = () => {
     viewer = pannellum.viewer('panorama', {
         "default": {
-            "firstScene": "south-quad"
+            "firstScene": "pac-quad"
         },
         "scenes": {
-            'south-quad': {
+            'north-quad': {
                 "type": "equirectangular",
                 "panorama": "https://pannellum.org/images/alma.jpg",
                 "preview": "https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg",
                 "autoLoad": false
             },
-            'north-quad': {
+            'south-quad': {
                 "type": "equirectangular",
-                "panorama": "/pac-quad.jpg",
-                "preview": "https://www.newton.ac.uk/files/covers/968361.jpg",
+                "panorama": "./vr-photos/south-quad.jpg",
+                "autoLoad": false
+            },
+            'pac-quad': {
+                "type": "equirectangular",
+                "panorama": "./vr-photos/pac-quad.jpg",
                 "autoLoad": false
             }
         }
@@ -39,7 +48,8 @@ var initViewer = () => {
 }
 
 var initSections = (id, description) => {
-    console.log(`#${id}`);
+    $('#background').append(`<div id="${id}" class="section"></div>`);
+
     $(`#${id}`)
     .mouseover(() => {
         $("#description").text(description);

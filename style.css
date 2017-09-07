@@ -42,15 +42,50 @@ body, html {
 #north-quad {
     left: 9%;
     width: 23%;
-    height: 25%;
     top: 31%;
+    height: 25%;
 }
 
 #south-quad {
+    left: 47%;
+    width: 9%;
+    top: 42%;
+    height: 20%;
+}
+
+#pac-quad {
     left: 63%;
     width: 22%;
-    height: 21%;
     top: 35%;
+    height: 21%;
+}
+
+#dining-hall {
+    left: 34%;
+    width: 13%;
+    top: 39%;
+    height: 17%;
+}
+
+#front {
+    left: 34%;
+    width: 14%;
+    top: 70%;
+    height: 19%;
+}
+
+#reception {
+    left: 34%;
+    width: 13%;
+    top: 55%;
+    height: 14%;
+}
+
+#extension-lawn {
+    left: 61%;
+    width: 26%;
+    top: 65%;
+    height: 20%;
 }
 
 .section {
@@ -64,10 +99,21 @@ body, html {
 #close {
     position: absolute;
     z-index: 999;
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #0000B4;
-    color: #0909B6;
+    background-color: #1647E1;
+    border: 1px solid #CBD8ED;
+    color: white;
+    transition: all 0.25s;
+
     left: 90%;
+    top: 2.5%;
     height: 40px;
     width: 100px;
+    border-radius: 16px;
+    font-size: 24px;
+}
+
+#close:hover {
+    background-color: white;
+    color: #1647E1;
+    border: 1px solid #1647E1;
 }

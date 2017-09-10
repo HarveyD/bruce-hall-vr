@@ -20,7 +20,7 @@ body, html {
 
 #background {
     transition: all .5s ease-in-out;
-    background-image: url(./bruce-background.png);
+    background-image: url(./bruce-background.jpg);
     height: 100%;
     width: 100%;
     z-index: 999;

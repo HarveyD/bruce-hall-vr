@@ -10,6 +10,17 @@ let sections = {
 };
 
 $(document).ready(() => {
+    $('<img/>').attr('src', './bruce-background.jpg').on('load', function() {
+        $(this).remove();
+        $('#background').css('background-image', 'url(./bruce-background.jpg)');
+
+        $('#loading-screen').css('opacity', 0);
+        setTimeout(function() {
+            $('#loading-screen').remove();
+        }, 1000); // To wait for the animation to finish
+     });
+
+
     Object.keys(sections).forEach(k => {
         initSections(k, sections[k]);
     });
@@ -75,7 +86,6 @@ var initViewer = (sceneName) => {
     config["scenes"][sceneName] = { // As we can't add dynamic keys in the initial config creation
         "type": "equirectangular",
         "panorama": `./vr-photos/${sceneName}.jpg`,
-        "preview": "https://ichef.bbci.co.uk/news/660/cpsprodpb/37B5/production/_89716241_thinkstockphotos-523060154.jpg",
         "autoLoad": true
     };
 
